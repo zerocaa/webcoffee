@@ -9,6 +9,7 @@ function route(app) {
     app.use('/menu', menuRouter);
     app.use('/reservation', reservation);
     app.use('/home', homeRouter);
+    app.use('/', homeRouter);
 
 }
 

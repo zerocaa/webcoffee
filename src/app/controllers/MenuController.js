@@ -1,9 +1,12 @@
+const Food = require('../models/Food');
 class MenuController {
 
 
     //[get] new
-    menu(req,res) {
-        res.render('menu');
+    index(req, res, next) {
+        Food.find({})
+            .then(foods => res.render('menu', { foods }))
+            .catch(next);
     }
 
 }

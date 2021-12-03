@@ -2,8 +2,13 @@ const path = require("path");
 const express = require("express");
 const handlebars = require("express-handlebars");
 const morgan = require("morgan");
-const e = require("express");
+const mongoose = require("mongoose");
+
 const app = express();
+const db = require("./config/db");
+//connect db
+db.connectDB();
+
 const port = 3000;
 
 const route = require("./routes");
@@ -23,7 +28,7 @@ app.engine(
 );
 
 app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "resources\\views"));
+app.set("views", path.join(__dirname, "resources","views"));
 
 
 

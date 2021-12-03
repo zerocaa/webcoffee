@@ -3,6 +3,6 @@ const router = express.Router();
 
 const menuController = require('../app/controllers/MenuController')
 
-router.get('/', menuController.menu);
+router.get('/', menuController.index);
 
 module.exports = router;
