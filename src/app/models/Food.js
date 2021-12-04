@@ -2,21 +2,44 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
  const Food = new Schema({
-    name: {
-        type: String,
-        required: true
+    
+    lunch: {
+        name: {type: String},
+        
+        price: {type: String},
+        image: {type: Number},
+        description: {type: String},
     },
-    price: {
-        type: Number,
-        required: true
+    breakfas: {
+        name: {type: String},
+        price: {type: Number},
+        description: {type: String},
+        image:{type: String},
     },
-    description: {
-        type: String,
-        required: true
+    desserts: {
+        name: {type: String},
+        price: {type: Number},
+        image: {type: String},
+        description: {type: String},
     },
-    image: {
-        type: String,
-        required: true
+    dinner: {
+        name: {type: String},
+        price: {type: Number},
+        image: {type: String},
+        description:{type: String},
     },
+    drinks: {
+        name: {type: String},
+        image: {type: String},
+        price: {type: Number},
+        description: {type: String},
+    },
+    winecard: {
+        name: {type: String},
+        image:{type: String},
+        price: {type: Number},
+        description: {type: String},
+    },
+
 });
 module.exports = mongoose.model('Food', Food);

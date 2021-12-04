@@ -10,9 +10,6 @@ class MenuController {
             .catch(next);
     }
     //find food 
-   
-
-   
 
 }
 
