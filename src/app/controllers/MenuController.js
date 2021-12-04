@@ -9,6 +9,10 @@ class MenuController {
             .then(foods => res.render('menu', { foods }))
             .catch(next);
     }
+    //find food 
+   
+
+   
 
 }
 
