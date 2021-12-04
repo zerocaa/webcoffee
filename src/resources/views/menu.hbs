@@ -30,18 +30,17 @@
                 </div>
                 {{#each foods}}
                 <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url({{this.image}});"></div>
+                    <div class="menu-img img" style="background-image: url({{this.breakfast.image}});"></div>
                     <div class="text">
                         <div class="d-flex">
                             <div class="one-half">
-                                <h3>{{this.name}}</h3>
-                                <h3>{{this.lunch.namelunch}}</h3>
+                                <h3>{{this.breakfast.name1}}</h3>
                             </div>  
                             <div class="one-forth">
-                                <span class="price">$29</span>
+                                <span class="price">{{this.breakfast.price}}</span>
                             </div>
                         </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                        <p><span>{{this.breakfast.description}}</span></p>
                     </div>
                 </div>
                 {{/each}}
@@ -53,222 +52,44 @@
                 <div class="heading-menu text-center ftco-animate">
                     <h3>Lunch</h3>
                 </div>
+                {{#each foods}}
                 <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/lunch-1.jpg);"></div>
+                    <div class="menu-img img" style="background-image: url({{this.lunch.image}});"></div>
                     <div class="text">
                         <div class="d-flex">
                             <div class="one-half">
-                                <h3>Grilled Beef with potatoes</h3>
+                                <h3>{{this.lunch.name}}</h3>
                             </div>
                             <div class="one-forth">
-                                <span class="price">$29</span>
+                                <span class="price">{{this.lunch.price}}</span>
                             </div>
                         </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                        <p><span>{{this.lunch.description}}</span></p>
                     </div>
                 </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/lunch-2.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/lunch-3.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/lunch-4.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/lunch-5.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/lunch-6.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/lunch-7.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/lunch-8.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
+                {{/each}}
             </div>
 
             <div class="col-md-6 col-lg-4 menu-wrap">
                 <div class="heading-menu text-center ftco-animate">
                     <h3>Dinner</h3>
                 </div>
+                {{#each foods}}
                 <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/dinner-1.jpg);"></div>
+                    <div class="menu-img img" style="background-image: url({{this.dinner.image}});"></div>
                     <div class="text">
                         <div class="d-flex">
                             <div class="one-half">
-                                <h3>Grilled Beef with potatoes</h3>
+                                <h3>{{this.dinner.name}}</h3>
                             </div>
                             <div class="one-forth">
-                                <span class="price">$29</span>
+                                <span class="price">{{this.dinner.price}}</span>
                             </div>
                         </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                        <p><span>{{this.dinner.description}}</span></p>
                     </div>
                 </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/dinner-2.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/dinner-3.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/dinner-4.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/dinner-5.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/dinner-6.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/breakfast-9.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
+                {{/each}}
             </div>
 
             <!--  -->
@@ -276,298 +97,66 @@
                 <div class="heading-menu text-center ftco-animate">
                     <h3>Desserts</h3>
                 </div>
+                {{#each foods}}
                 <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/dessert-1.jpg);"></div>
+                    <div class="menu-img img" style="background-image: url({{this.desserts.image}});"></div>
                     <div class="text">
                         <div class="d-flex">
                             <div class="one-half">
-                                <h3>Grilled Beef with potatoes</h3>
+                                <h3>{{this.desserts.name}}</h3>
                             </div>
                             <div class="one-forth">
-                                <span class="price">$29</span>
+                                <span class="price">{{this.desserts.price}}</span>
                             </div>
                         </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                        <p><span>{{this.desserts.description}}</span></p>
                     </div>
                 </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/dessert-2.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/dessert-3.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/dessert-4.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/dessert-5.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
+                {{/each}}
             </div>
 
             <div class="col-md-6 col-lg-4 menu-wrap">
                 <div class="heading-menu text-center ftco-animate">
                     <h3>Wine Card</h3>
                 </div>
+                {{#each foods}}
                 <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/wine-1.jpg);"></div>
+                    <div class="menu-img img" style="background-image: url({{this.winecard.image}});"></div>
                     <div class="text">
                         <div class="d-flex">
                             <div class="one-half">
-                                <h3>Grilled Beef with potatoes</h3>
+                                <h3>{{this.winecard.name}}</h3>
                             </div>
                             <div class="one-forth">
-                                <span class="price">$29</span>
+                                <span class="price">{{this.winecard.price}}</span>
                             </div>
                         </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                        <p><span>{{this.winecard.description}}</span></p>
                     </div>
                 </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/wine-2.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/wine-3.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/wine-4.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/wine-5.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/wine-6.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/wine-7.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/wine-8.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
+                {{/each}}
             </div>
 
             <div class="col-md-6 col-lg-4 menu-wrap">
                 <div class="heading-menu text-center ftco-animate">
                     <h3>Drinks</h3>
                 </div>
+                {{#each foods}}
                 <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/drink-1.jpg);"></div>
+                    <div class="menu-img img" style="background-image: url({{this.drinks.image}});"></div>
                     <div class="text">
                         <div class="d-flex">
                             <div class="one-half">
-                                <h3>Grilled Beef with potatoes</h3>
+                                <h3>{{this.drinks.name}}</h3>
                             </div>
                             <div class="one-forth">
-                                <span class="price">$29</span>
+                                <span class="price">{{this.drinks.price}}</span>
                             </div>
                         </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                        <p><span>{{this.drinks.description}}</span></p>
                     </div>
                 </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/drink-2.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/drink-3.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/drink-4.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/drink-5.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/drink-6.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
-                <div class="menus d-flex ftco-animate">
-                    <div class="menu-img img" style="background-image: url(images/drink-7.jpg);"></div>
-                    <div class="text">
-                        <div class="d-flex">
-                            <div class="one-half">
-                                <h3>Grilled Crab with Onion</h3>
-                            </div>
-                            <div class="one-forth">
-                                <span class="price">$29</span>
-                            </div>
-                        </div>
-                        <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                    </div>
-                </div>
+                {{/each}}
             </div>
         
         </div>
