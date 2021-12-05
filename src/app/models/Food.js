@@ -4,19 +4,50 @@ const Schema = mongoose.Schema;
  const Food = new Schema({
     name: {
         type: String,
-        required: true
-    },
-    price: {
-        type: Number,
-        required: true
-    },
-    description: {
+      },
+      avatar: {
         type: String,
-        required: true
-    },
-    image: {
+      },
+      cloudinary_id: {
         type: String,
-        required: true
+      },
+    lunch: {
+        name: {type: String},
+        
+        price: {type: String},
+        image: {type: Number},
+        description: {type: String},
     },
+    breakfas: {
+        name: {type: String},
+        price: {type: Number},
+        description: {type: String},
+        image:{type: String},
+    },
+    desserts: {
+        name: {type: String},
+        price: {type: Number},
+        image: {type: String},
+        description: {type: String},
+    },
+    dinner: {
+        name: {type: String},
+        price: {type: Number},
+        image: {type: String},
+        description:{type: String},
+    },
+    drinks: {
+        name: {type: String},
+        image: {type: String},
+        price: {type: Number},
+        description: {type: String},
+    },
+    winecard: {
+        name: {type: String},
+        image:{type: String},
+        price: {type: Number},
+        description: {type: String},
+    },
+
 });
 module.exports = mongoose.model('Food', Food);
