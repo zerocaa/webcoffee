@@ -8,7 +8,6 @@ const app = express();
 const db = require("./config/db");
 //connect db
 db.connectDB();
-
 const port = 3000;
 
 const route = require("./routes");
