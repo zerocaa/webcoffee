@@ -1,14 +1,19 @@
+const Food = require('../models/Food');
 class ContactController {
-
-
-    //[get] new
-    index(req,res) {
+    //create new contact
+    index(req, res) {
         res.render('contact');
     }
-    //create new contact
-    create(req,res) {
-        console.log("create");
+
+    // post
+    post(req, res) {
+        res.send('');
     }
+
+    // order(req, res, next) {
+    //     const orderData = req.body;
+    //     res.json(orderData);
+    // }
 
 }
 

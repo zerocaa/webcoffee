@@ -5,7 +5,7 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
                 <h1 class="mb-2 bread">Make Reservation</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
+                <p class="breadcrumbs"><span class="mr-2"><a href="home">Home <i
                                 class="ion-ios-arrow-forward"></i></a></span> <span>Reservation <i
                             class="ion-ios-arrow-forward"></i></span></p>
             </div>
@@ -22,56 +22,33 @@
                     <span class="subheading">Book a Table</span>
                     <h2 class="mb-4">Make Reservation</h2>
                 </div>
-                <form action="/" method="POST" autocomplete="off" >
+                <form action="/editorder" method="POST">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Name</label>
-                                <input type="text" class="form-control" placeholder="Your Name">
+                                <input id="order-name" name="name" type="text" class="form-control"
+                                    placeholder="Your Name">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Email</label>
-                                <input type="text" class="form-control" placeholder="Your Email">
+                                <input id="order-email" name="email" type="text" class="form-control"
+                                    placeholder="Your Email">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
-                                <label for="">Phone</label>
-                                <input type="text" class="form-control" placeholder="Phone">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="">Phone</label>
-                                <input type="text" class="form-control" id="book_date" placeholder="Date">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="">Time</label>
-                                <input type="text" class="form-control" id="book_time" placeholder="Time">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="">Person</label>
-                                <div class="select-wrap one-third">
-                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Person</option>
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                        <option value="">4+</option>
-                                    </select>
-                                </div>
+                                <label for="">Order</label>
+                                <textarea id="order-description" name="order" style="background:#fffffa !important"
+                                    class="form-control" rows="8" placeholder="Describe your order here..."></textarea>
                             </div>
                         </div>
                         <div class="col-md-12 mt-3">
-                            <div class="form-group">
-                                <input type="submit" value="Make a Reservation" class="btn btn-primary py-3 px-5">
+                            <div id="btn-order-container" class="form-group">
+                                <input id="btn-order" type="submit" value="Place Your Order!"
+                                    class="btn btn-primary py-3 px-5">
                             </div>
                         </div>
                     </div>

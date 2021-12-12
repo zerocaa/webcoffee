@@ -11,14 +11,13 @@ class MenuController {
     }
 
     //show menu
-    show(req, res, next) {
-        Food.findOne({ slug: req.params.slug })
-            .then(food =>
-                res.render('menu/listdishes', { foods: mongooseToObject(food) })
-            )
-            .catch(next);
-        
-    }
+    // list(req, res, next) {
+    //     Food.findOne({ slug: req.params.slug }).lean()
+    //         .then(foods =>
+    //             res.render('listdishes', { foods})
+    //         )
+    //         .catch(next);
+    // }
     //find food 
 
 }

@@ -10,7 +10,7 @@ const Schema = mongoose.Schema;
       },
       cloudinary_id: {
         type: String,
-      },
+     },
     lunch: {
         name: {type: String},
         
@@ -22,7 +22,8 @@ const Schema = mongoose.Schema;
         name: {type: String},
         price: {type: Number},
         description: {type: String},
-        image:{type: String},
+        image: { type: String },
+        videoId: {type: String}
     },
     desserts: {
         name: {type: String},
@@ -48,6 +49,13 @@ const Schema = mongoose.Schema;
         price: {type: Number},
         description: {type: String},
     },
-
-});
+     order: {
+         name: { type: String ,defaults: '', display: true },
+         email: { type: String, defaults: ''},
+         order: { type: String, defaults: ''},
+     },
+ },
+{
+     timestamps: true,
+ }  );
 module.exports = mongoose.model('Food', Food);

@@ -10,12 +10,12 @@
                 </div>
                 <div class="one-forth d-flex js-fullheight align-items-center ftco-animate"
                     data-scrollax=" properties: { translateY: '70%' }">
+                    {{#each foods}}
                     <div class="text mt-md-5">
-                        <h1 class="mb-4">Eat Healthy <br> and Natural Foods</h1>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            It is a paradisematic country.</p>
-                        <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Book A Table</a></p>
+                        <h1 class="mb-4">{{{this.header.head}}}</h1>
+                        <p>{{this.header.subtext}}</p>               
                     </div>
+                    {{/each}}
                 </div>
             </div>
         </div>
