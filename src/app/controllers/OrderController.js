@@ -10,7 +10,7 @@ class OrderController {
         // res.json(req.body);
         const order = new Order(req.body);
         order.save()
-            .then(() => res.redirect('/'))
+            .then(() => res.redirect('/me/stored/listorder'))
             .catch(err => {
                 
             })
@@ -34,9 +34,23 @@ class OrderController {
 
     //[DELETE] /order/:id
     destroy(req, res, next) {
-        Order.deleteOne({ _id: req.params.id })
+        Order.delete({ _id: req.params.id })
             .then(() => res.redirect('back'))
             .catch(next)
+    }
+
+    // [DELETE] /order/:id/force
+    forceDestroy(req, res, next) {
+        Order.deleteOne({ _id: req.params.id })
+            .then(() => res.redirect('back'))
+            .catch(next);
+    }
+
+    // [PATCH] /order/:id/restore
+    restore(req, res, next) {
+        Order.restore({ _id: req.params.id })
+            .then(() => res.redirect('back'))
+            .catch(next);
     }
 }
 

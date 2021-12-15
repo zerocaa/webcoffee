@@ -1,19 +1,18 @@
 <div class="mt-4">
-    <div class="row">
-        <div class="col-lg-3">
-            <form action="/">
-                    <button class="custom-btn btn-5"><span>Tổng quan video</span></button>
-                </form>
-            <ul>
-                <li>Độ phổ biến : {{course.level}}</li>
-                <li>Tổng quan nhanh :{{course.description}}</li>
-            </ul>
+    <div class="row">   
+        <div class="col-lg-3" >
+            <form action="/menu">
+                <button class="custom-btn btn-1"><span>Xem Các Món Khác</span></button>
+            </form>
         </div>
-
-        <div class="col-lg-9">
-            <h2>{{course.name}}</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{course.videoId}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>{{course.description}}</p>
+        <div class="col-lg-6" style="text-align:center;">
+            <h2>{{listdishes.name}}</h2>
+            <iframe width="760" height="315" src="http://img.youtube.com/vi/{{listdishes.videoId}}/sddefault.jpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="padding-left: 80px;" allowfullscreen></iframe>
+            
+        </div>
+        <div class="col-lg-3" style="margin-top:45px">
+        <p>Description : {{listdishes.description}}</p>
+        <p>Price : {{listdishes.price}}VNĐ</p>
         </div>
     </div>
 </div>

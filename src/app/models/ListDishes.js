@@ -4,7 +4,7 @@ const mongooseDelete = require('mongoose-delete');
 
 const Schema = mongoose.Schema;
 
-const Course = new Schema(
+const ListDishes = new Schema(
     {
         name: { type: String, required: true },
         description: { type: String },
@@ -20,9 +20,9 @@ const Course = new Schema(
 
 // Add plugins
 mongoose.plugin(slug);
-Course.plugin(mongooseDelete, {
+ListDishes.plugin(mongooseDelete, {
     deletedAt: true,
     overrideMethods: 'all',
 });
 
-module.exports = mongoose.model('Course', Course);
+module.exports = mongoose.model('ListDishes', ListDishes);

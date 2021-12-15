@@ -10,6 +10,9 @@ class ContactController {
         res.send('');
     }
 
+    feedback(req, res) {
+        res.render('feedback');
+    }
     // order(req, res, next) {
     //     const orderData = req.body;
     //     res.json(orderData);

@@ -9,6 +9,15 @@ class MeController {
             }))
             .catch(next);
     }
+    trashOrder(req, res, next) {
+        Order.findDeleted({})
+            .then((orders) =>
+                res.render('me/trash-order', {
+                    orders: mutipleMongooseToObject(orders),
+                }),
+            )
+            .catch(next);
+    }
 }
 
 module.exports = new MeController;

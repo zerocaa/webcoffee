@@ -1,4 +1,4 @@
-const Course = require('../models/Course');
+const ListDishes = require('../models/ListDishes');
 const { mongooseToObject } = require('../../util/mongoose');
 class ListController {
 
@@ -6,10 +6,10 @@ class ListController {
     //[get] new
     //show menu
     show(req, res, next) {
-        Course.findOne({ slug: req.params.slug })
-            .then((course) =>
+        ListDishes.findOne({ slug: req.params.slug })
+            .then((listdishes) =>
                 res.render('listdishes/show', {
-                    course: mongooseToObject(course),
+                    listdishes: mongooseToObject(listdishes),
                 }),
             )
             .catch(next)

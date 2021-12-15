@@ -9,5 +9,5 @@ router.use(express.urlencoded({
 router.use(express.json());
 
 router.get('/stored/listorder', meController.storedOrder);
-
+router.get('/trash/listorder', meController.trashOrder);
 module.exports = router;

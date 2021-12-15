@@ -1,8 +1,7 @@
 <div class="mt-4">
 
-    {{#each foods}}
+    {{#each listdishes}}
     <div class="row">
-      
         <div class="col-lg-3">
             <form action="/">
                 <button class="custom-btn btn-5"><span>Quay Về Trang Chủ</span></button>
@@ -14,8 +13,8 @@
             <button style="text-align: center;" type="submit" class="btn btn-primary">Chọn Món</button>
         </div>
         <div class="col-lg-9">
-            <h2>{{this.breakfast.name}}</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{this.breakfast.videoId}}" frameborder="0"
+            <h2>{{this.name}}</h2>
+            <iframe width="560" height="315" src="http://img.youtube.com/vi/{{this.breakfast.videoId}}/sddefault.jpg" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
             <p>{{this.breakfast.description}}</p>

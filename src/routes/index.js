@@ -4,7 +4,6 @@ const userRouter = require('./user');
 const menuRouter = require('./menu');
 const contactRouter = require('./contact');
 const listRouter = require('./listdishes');
-const courseRouter = require('./courses');
 const searchRouter = require('./search');
 const orderRouter = require('./order');
 const meRouter = require('./me');
@@ -14,7 +13,6 @@ function route(app) {
     app.use('/blog', blogRouter);
     app.use('/user', userRouter);
     app.use('/menu', menuRouter);
-    app.use('/courses', courseRouter);
     app.use('/contact', contactRouter);
     app.use('/order', orderRouter);
     app.use('/home', homeRouter);   

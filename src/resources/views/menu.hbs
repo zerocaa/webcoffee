@@ -28,7 +28,9 @@
                 <div class="heading-menu text-center ftco-animate">
                     <h3>Breakfast</h3>
                 </div>
+                
                 {{#each foods}}
+                <a href="/listdishes/{{this.breakfast.slug}}">
                 <div class="menus d-flex ftco-animate">
                     <div class="menu-img img" style="background-image: url({{this.breakfast.image}});"></div>
                     <div class="text">
@@ -43,9 +45,8 @@
                         <p><span>{{this.breakfast.description}}</span></p>
                     </div>
                 </div>
-                {{/each}}
-             
-                
+                </a>
+                {{/each}}   
             </div>
          
             <div class="col-md-6 col-lg-4 menu-wrap">
@@ -53,8 +54,11 @@
                     <h3>Lunch</h3>
                 </div>
                 {{#each foods}}
+                <a href="/listdishes/{{this.lunch.slug}}">
                 <div class="menus d-flex ftco-animate">
+                    
                     <div class="menu-img img" style="background-image: url({{this.lunch.image}});"></div>
+                    
                     <div class="text">
                         <div class="d-flex">
                             <div class="one-half">
@@ -67,7 +71,9 @@
                         <p><span>{{this.lunch.description}}</span></p>
                     </div>
                 </div>
+                </a>
                 {{/each}}
+
             </div>
 
             <div class="col-md-6 col-lg-4 menu-wrap">
@@ -75,6 +81,7 @@
                     <h3>Dinner</h3>
                 </div>
                 {{#each foods}}
+                <a href="/listdishes/{{this.dinner.slug}}">
                 <div class="menus d-flex ftco-animate">
                     <div class="menu-img img" style="background-image: url({{this.dinner.image}});"></div>
                     <div class="text">
@@ -89,6 +96,7 @@
                         <p><span>{{this.dinner.description}}</span></p>
                     </div>
                 </div>
+                </a>
                 {{/each}}
             </div>
 
@@ -98,6 +106,7 @@
                     <h3>Desserts</h3>
                 </div>
                 {{#each foods}}
+                <a href="/listdishes/{{this.dinner.slug}}">
                 <div class="menus d-flex ftco-animate">
                     <div class="menu-img img" style="background-image: url({{this.desserts.image}});"></div>
                     <div class="text">
@@ -112,6 +121,7 @@
                         <p><span>{{this.desserts.description}}</span></p>
                     </div>
                 </div>
+                </a>
                 {{/each}}
             </div>
 
@@ -120,6 +130,7 @@
                     <h3>Wine Card</h3>
                 </div>
                 {{#each foods}}
+                <a href="/listdishes/{{this.winecard.slug}}">
                 <div class="menus d-flex ftco-animate">
                     <div class="menu-img img" style="background-image: url({{this.winecard.image}});"></div>
                     <div class="text">
@@ -134,6 +145,7 @@
                         <p><span>{{this.winecard.description}}</span></p>
                     </div>
                 </div>
+                </a>
                 {{/each}}
             </div>
 
@@ -142,6 +154,7 @@
                     <h3>Drinks</h3>
                 </div>
                 {{#each foods}}
+                <a href="/listdishes/{{this.drinks.slug}}">
                 <div class="menus d-flex ftco-animate">
                     <div class="menu-img img" style="background-image: url({{this.drinks.image}});"></div>
                     <div class="text">
@@ -156,6 +169,7 @@
                         <p><span>{{this.drinks.description}}</span></p>
                     </div>
                 </div>
+                </a>
                 {{/each}}
             </div>
         
