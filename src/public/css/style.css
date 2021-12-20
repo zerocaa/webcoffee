@@ -8699,7 +8699,6 @@ h1, h2, h3, h4, h5,
     -ms-border-radius: 50%;
     border-radius: 50%; }
   .menus:hover {
-    text-decoration: solid 1px black;
     border-bottom: 1px dashed black; }
     .menus:hover .text .one-forth .price {
       color: #000000; }
