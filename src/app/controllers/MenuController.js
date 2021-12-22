@@ -9,16 +9,7 @@ class MenuController {
             .then(foods => res.render('menu', { foods }))
             .catch(next);
     }
-
-    //show menu
-    // list(req, res, next) {
-    //     Food.findOne({ slug: req.params.slug }).lean()
-    //         .then(foods =>
-    //             res.render('listdishes', { foods})
-    //         )
-    //         .catch(next);
-    // }
-    //find food 
+    
 
 }
 

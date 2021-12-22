@@ -7,6 +7,7 @@ const listRouter = require('./listdishes');
 const searchRouter = require('./search');
 const orderRouter = require('./order');
 const meRouter = require('./me');
+const adminRouter = require('./admin');
 // const router = require('./home');
 function route(app) {
     app.use('/me',meRouter);
@@ -18,6 +19,7 @@ function route(app) {
     app.use('/home', homeRouter);   
     app.use('/search', searchRouter);
     app.use('/listdishes', listRouter);
+    app.use('/admin', adminRouter);
     app.use('/', homeRouter);
 
 }

@@ -16,7 +16,6 @@ router.delete('/:id', orderController.destroy);
 router.patch('/:id/restore', orderController.restore);
 router.delete('/:id/force', orderController.forceDestroy);
 router.get('/:id/edit', orderController.edit);
-
 router.get('/', orderController.create);
 
 // router.post('/', async (req, res, next) => {

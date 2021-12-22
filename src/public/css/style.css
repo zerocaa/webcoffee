@@ -8699,8 +8699,9 @@ h1, h2, h3, h4, h5,
     -ms-border-radius: 50%;
     border-radius: 50%; }
   .menus:hover {
-    text-decoration: solid 1px black;
-    border-bottom: 1px dashed black; }
+      background-position: right center;
+     background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+     }
     .menus:hover .text .one-forth .price {
       color: #000000; }
 

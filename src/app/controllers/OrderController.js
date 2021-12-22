@@ -3,7 +3,7 @@ const { mongooseToObject } = require('../../util/mongoose');
 class OrderController {
     //[Get] /order
     create(req, res, next) {
-       res.render('order')
+        res.render('order')
     }
     //[POST] /order/stored
     store(req, res, next) {
@@ -12,7 +12,6 @@ class OrderController {
         order.save()
             .then(() => res.redirect('/me/stored/listorder'))
             .catch(err => {
-                
             })
     }
     //[GET] /order/:id/edit

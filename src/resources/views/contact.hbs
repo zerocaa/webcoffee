@@ -5,7 +5,7 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
                 <h1 class="mb-2 bread">Make Reservation</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="home">Home <i
+                <p class="breadcrumbs"><span class="mr-2"><a href="/home">Home <i
                                 class="ion-ios-arrow-forward"></i></a></span> <span>Reservation <i
                             class="ion-ios-arrow-forward"></i></span></p>
             </div>
@@ -22,25 +22,26 @@
                     <span class="subheading">Contact With Us</span>
                     <h2 class="mb-4">Send Your Feedback</h2>
                 </div>       
+                <form class="mt-4" method="POST" action="/contact/feedback">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="">Name</label>
-                                <input id="order-name" name="name" type="text" class="form-control"
+                                <label for="name">Name</label>
+                                <input id="name" name="name" type="text" class="form-control"
                                     placeholder="Your Name">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="">Email</label>
-                                <input id="order-email" name="email" type="text" class="form-control"
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="text" class="form-control"
                                     placeholder="Your Email">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="">Your Feedback</label>
-                                <textarea id="order-description" name="order" style="background:#fffffa !important"
+                                <label for="feedback">Your Feedback</label>
+                                <textarea id="feedback" name="feedback" style="background:#fffffa !important"
                                     class="form-control" rows="8" placeholder="Leave Your Feedback Here..."></textarea>
                             </div>
                         </div>
@@ -53,6 +54,7 @@
                         </div>
                         </a>
                     </div>
+                </form>
             </div>
         </div>
     </div>
