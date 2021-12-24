@@ -8,7 +8,9 @@ class ListController {
     //[get] new
     //show menu
     show(req, res, next) {
-        ListDishes.findOne({ slug: "banhmibi" }).lean()
+        ListDishes.findOne()
+            .where('slug').equals(req.params.slug)
+            .lean()
             .populate('othermenu')
             .then((listdishes) =>
                 res.render('listdishes/show', {
@@ -30,8 +32,6 @@ class ListController {
         
     }
     //find food     
-    
-
 }
 
 module.exports = new ListController;
