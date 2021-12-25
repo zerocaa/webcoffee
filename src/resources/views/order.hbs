@@ -1,19 +1,21 @@
 <div class="mt-4">
     <h3 style="text-align:center;">Order</h3>
-  <form class="mt-4" method="POST" action="/order/store">  
+    <form class="mt-4" method="POST" action="/order/store">
         <div class="row">
-        <div class="form-group col-lg-6">
-            <label for="name">Tên món ăn</label>
-            <input type="text"  placeholder="Gọi Tên Món Ăn Không Được Quá 5 TỪ" class="form-control"  id="name" name="name">
-        </div>
-        <div class="form-group col-lg-6" >
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email">
-        </div>
+            <div class="form-group col-lg-6">
+                <label for="name">Tên món ăn</label>
+                <input type="text" placeholder="Gọi Tên Món Ăn Không Được Quá 5 TỪ" class="form-control" id="name"
+                    name="name">
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
         </div>
         <div class="form-group">
             <label for="description">Ghi Chú Khi Gọi Món</label>
-            <textarea class="form-control" maxlength="240" id="description" placeholder="Bạn Không Được Ghi Quá 50 Từ" name="description"></textarea>
+            <textarea class="form-control" maxlength="240" id="description" placeholder="Bạn Không Được Ghi Quá 50 Từ"
+                name="description"></textarea>
         </div>
         <div class="wrapper" style="text-align: center">
             <button type="submit" class="btn btn-primary baoanh">Gọi Món</button>

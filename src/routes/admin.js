@@ -8,8 +8,11 @@ router.use(express.urlencoded({
 }));
 router.use(express.json());
 
-router.get('/test',adminController.testallaccount ,adminController.allaccount);
+router.get('/test', adminController.testallaccount, adminController.allaccount);
 router.get('/', adminController.allaccount);
+router.post('/store', adminController.postmenu);
+router.get('/trash/menu', adminController.trashMenu);
+router.get('/stored/menu', adminController.storedMenu);
 router.get('/stored/user', adminController.account);
 router.get('/createmenu', adminController.create);
 router.get('/stored/contact', adminController.storedContact);

@@ -1,6 +1,7 @@
 const User = require('../models/User');
 const Order = require('../models/Order');
 const Feedback = require('../models/Feedback');
+const Food = require('../models/Food');
 const { mutipleMongooseToObject } = require('../../util/mongoose');
 class AdminController {
     //middleware testallaccount
@@ -59,7 +60,7 @@ class AdminController {
     create(req, res, next) {
         res.render('admin/createmenu')
     }
-    //[Get] /me/stored/listorder
+
     storedContact(req, res, next) {
         Feedback.find({}).lean()
             .then(feedbacks => res.render('admin/stored-contact', {
@@ -93,6 +94,33 @@ class AdminController {
                 console.log(err);
             })
     }
+
+    postmenu(req, res, next) {
+        const menu = new Order(req.body);
+        menu.save()
+            .then(() => res.redirect('/admin/stored/menu'))
+            .catch(err => {
+            })
+    }
+    
+    storedMenu(req, res, next) {
+        Food.find({})
+            .then(foods => res.render('admin/stored-menu', {
+                foods: mutipleMongooseToObject(foods)
+            }))
+            .catch(next);
+    }
+    
+    trashMenu(req, res, next) {
+        Food.findDeleted({})
+            .then((foods) =>
+                res.render('admin/trash-menu', {
+                    foods: mutipleMongooseToObject(foods),
+                }),
+            )
+            .catch(next);
+    }
+
 }
 
 module.exports = new AdminController;
