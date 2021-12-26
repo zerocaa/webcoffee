@@ -16,13 +16,13 @@
             </tr>
         </thead>
         <tbody>
-            {{#each foods}}
+            {{#each breakfasts}}
             <tr>
                 <th scope="row">{{sum @index 1}}</th>
-                <td>{{this.lunch.name}}</td>
-                <td>{{this.breakfast.name}}</td>
-                <td>{{this.dinner.name}}</td>
-                <td>{{this.drinks.name}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.description}}</td>
+                <td>{{this.price}}</td>
+                <td>{{this.createdAt}}</td>
                 <td>
                     <a href="" class="btn btn-link" data-toggle="modal" data-id="{{this._id}}"
                         data-target="#delete-course-modal">Xóa</a>

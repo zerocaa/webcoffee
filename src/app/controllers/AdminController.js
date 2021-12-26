@@ -1,21 +1,27 @@
 const User = require('../models/User');
 const Order = require('../models/Order');
 const Feedback = require('../models/Feedback');
+const Breakfast = require('../models/Breakfast');
+const Lunch = require('../models/Lunch');
+const Dinner = require('../models/Dinner');
+const Dessert = require('../models/Dessert');
+const Winecard = require('../models/Winecard');
+const Drink = require('../models/Drink');
 const Food = require('../models/Food');
 const { mutipleMongooseToObject } = require('../../util/mongoose');
 class AdminController {
     //middleware testallaccount
     testallaccount(req, res, next) {
         req.query.litmit = "3";
-        req.query.sort = "-email";
-        req.query.field = "email";
+        req.query.sort = "email";
+        req.query.field = "email,description";
         next();
     }
 
     //render data Order models
     async allaccount(req, res, next) {
         try {
-            const queryObj = {...req.query};
+            const queryObj = { ...req.query };
             const excludeFields = ['page', 'limit', 'sort'];
             excludeFields.forEach(field => delete queryObj[field]);
 
@@ -37,13 +43,13 @@ class AdminController {
                 query.select('-__v');
             }
             //pagination
-            const page =req.query.page * 1 || 1;
+            const page = req.query.page * 1 || 1;
             const limit = req.query.limit * 1 || 10;
-            const skip = (page - 1 ) * limit;
+            const skip = (page - 1) * limit;
             query.skip(skip).limit(limit);
-            if(req.query.page) {
+            if (req.query.page) {
                 const numOder = await Order.countDocuments();
-                if(skip >= numOder) {
+                if (skip >= numOder) {
                     throw new Error('Page not found');
                 }
             }
@@ -88,7 +94,7 @@ class AdminController {
                 }
             })
             .then(data => {
-               res.json(data);
+                res.json(data);
             })
             .catch(err => {
                 console.log(err);
@@ -102,20 +108,110 @@ class AdminController {
             .catch(err => {
             })
     }
-    
-    storedMenu(req, res, next) {
-        Food.find({})
-            .then(foods => res.render('admin/stored-menu', {
-                foods: mutipleMongooseToObject(foods)
+
+    storedbreakfast(req, res, next) {
+        Breakfast.find({})
+            .then(breakfasts => res.render('admin/stored-menu', {
+                breakfasts: mutipleMongooseToObject(breakfasts)
             }))
             .catch(next);
     }
-    
-    trashMenu(req, res, next) {
-        Food.findDeleted({})
-            .then((foods) =>
+
+    trashbreakfast(req, res, next) {
+        Breakfast.findDeleted({})
+            .then((breakfasts) =>
                 res.render('admin/trash-menu', {
-                    foods: mutipleMongooseToObject(foods),
+                    breakfasts: mutipleMongooseToObject(breakfasts),
+                }),
+            )
+            .catch(next);
+    }
+
+    storedlunch(req, res, next) {
+        Lunch.find({})
+            .then(lunchs => res.render('admin/stored-menu', {
+                lunchs: mutipleMongooseToObject(lunchs)
+            }))
+            .catch(next);
+    }
+
+    trashlunch(req, res, next) {
+        Lunch.findDeleted({})
+            .then((lunchs) =>
+                res.render('admin/trash-menu', {
+                    lunchs: mutipleMongooseToObject(lunchs),
+                }),
+            )
+            .catch(next);
+    }
+
+    storeddrink(req, res, next) {
+        Drink.find({})
+            .then(drinks => res.render('admin/stored-menu', {
+                drinks: mutipleMongooseToObject(drinks)
+            }))
+            .catch(next);
+    }
+
+    trashdrink(req, res, next) {
+        Drink.findDeleted({})
+            .then((drinks) =>
+                res.render('admin/trash-menu', {
+                    drinks: mutipleMongooseToObject(drinks),
+                }),
+            )
+            .catch(next);
+    }
+
+    storedwinecard(req, res, next) {
+        Winecard.find({})
+            .then(winecards => res.render('admin/stored-menu', {
+                winecards: mutipleMongooseToObject(winecards)
+            }))
+            .catch(next);
+    }
+
+    trashwinecard(req, res, next) {
+        Winecard.findDeleted({})
+            .then((winecards) =>
+                res.render('admin/trash-menu', {
+                    winecards: mutipleMongooseToObject(winecards),
+                }),
+            )
+            .catch(next);
+    }
+
+    storeddinner(req, res, next) {
+        Dinner.find({})
+            .then(dinners => res.render('admin/stored-menu', {
+                dinners: mutipleMongooseToObject(dinners)
+            }))
+            .catch(next);
+    }
+
+    trashdinner(req, res, next) {
+        Dinner.findDeleted({})
+            .then((dinners) =>
+                res.render('admin/trash-menu', {
+                    dinners: mutipleMongooseToObject(dinners),
+                }),
+            )
+            .catch(next);
+    }
+
+    storeddessert(req, res, next) {
+        Dessert.find({})
+            .then(desserts => res.render('admin/stored-menu', {
+                desserts: mutipleMongooseToObject(desserts)
+            }))
+            .catch(next);
+    }
+
+    trashdessert(req, res, next) {
+        Dessert.findDeleted({})
+            .then((desserts) =>
+                res.render('admin/trash-menu', {
+                    desserts: mutipleMongooseToObject(desserts),
                 }),
             )
             .catch(next);
