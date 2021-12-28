@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const cloudinary = require("../util/cloudinary");
+const cloudinary = require("../config/db/cloudinary");
 const upload = require("../util/multer");
 const Food = require("../app/models/Food");
 
@@ -8,7 +8,7 @@ router.post("/", upload.single("image"), async (req, res) => {
     // Upload image to cloudinary
     const result = await cloudinary.uploader.upload(req.file.path);
 
-    // Create new user
+    // Create new usere
     let foods = new Food({
       name: req.body.name,
       avatar: result.secure_url,
@@ -23,9 +23,12 @@ router.post("/", upload.single("image"), async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  Food.find({}).lean()
-  .then(foods => res.json(foods))
-  .catch(err => console.log(err));
+  try {
+    const foods = await Food.find();
+    res.json(foods);
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 router.delete("/:id", async (req, res) => {
@@ -70,7 +73,7 @@ router.get("/:id", async (req, res) => {
     let foods = await Food.findById(req.params.id);
     res.json(foods);
   } catch (err) {
-    console.log(err);
+    console.log("loi da xay ra");
   }
 });
 
