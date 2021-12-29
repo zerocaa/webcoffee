@@ -1,7 +1,7 @@
 <div class="mt-4">
     <div>
         <h3>List FeedBack</h3>
-        <a href="/admin/trash/contact">Thùng rác {{deletedFeedback}}</a>
+        <a href="/admin/trash/dinner">Thùng rác {{deletedFeedback}}</a>
     </div>
     <table class="table mt-4">
         <thead>
@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            {{#each lunchs}}
+            {{#each dinners}}
             <tr>
                 <th scope="row">{{sum @index 1}}</th>
                 <td>{{this.name}}</td>

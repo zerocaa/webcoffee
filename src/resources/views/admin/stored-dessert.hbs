@@ -7,16 +7,16 @@
         <thead>
             <tr>
                 <th scope="col">#</th>     
-                <th scope="col">User</th>
-                <th scope="col">Email User</th>
-                <th scope="col">FeedBack</th>
+                <th scope="col">Food Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Description</th>
                 <th style="
     padding-left: 64px;
-" scope="col" colspan="2">Thời gian gọi</th>
+" scope="col" colspan="2">Thời gian tạo</th>
             </tr>
         </thead>
         <tbody>
-            {{#each breakfasts}}
+            {{#each desserts}}
             <tr>
                 <th scope="row">{{sum @index 1}}</th>
                 <td>{{this.name}}</td>

@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const slug = require('mongoose-slug-generator');
+const mongooseDelete = require('mongoose-delete');
 const Schema = mongoose.Schema;
 
 const Drink = new Schema({
@@ -10,5 +12,9 @@ const Drink = new Schema({
     {
      timestamps: true,
      });
- 
+mongoose.plugin(slug);
+Drink.plugin(mongooseDelete, {
+        deletedAt: true,
+        overrideMethods: 'all',
+});
 module.exports = mongoose.model('Drink', Drink);

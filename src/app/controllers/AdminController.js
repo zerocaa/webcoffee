@@ -2,7 +2,6 @@ const User = require('../models/User');
 const Order = require('../models/Order');
 const Feedback = require('../models/Feedback');
 const Breakfast = require('../models/Breakfast');
-const Lunch = require('../models/Lunch');
 const Dinner = require('../models/Dinner');
 const Dessert = require('../models/Dessert');
 const Winecard = require('../models/Winecard');
@@ -61,12 +60,6 @@ class AdminController {
         }
     }
 
-
-    //[POST] /admin/createmenu
-    create(req, res, next) {
-        res.render('admin/createmenu')
-    }
-
     storedContact(req, res, next) {
         Feedback.find({}).lean()
             .then(feedbacks => res.render('admin/stored-contact', {
@@ -100,123 +93,6 @@ class AdminController {
                 console.log(err);
             })
     }
-
-    postmenu(req, res, next) {
-        const menu = new Order(req.body);
-        menu.save()
-            .then(() => res.redirect('/admin/stored/menu'))
-            .catch(err => {
-            })
-    }
-
-    storedbreakfast(req, res, next) {
-        Breakfast.find({})
-            .then(breakfasts => res.render('admin/stored-menu', {
-                breakfasts: mutipleMongooseToObject(breakfasts)
-            }))
-            .catch(next);
-    }
-
-    trashbreakfast(req, res, next) {
-        Breakfast.findDeleted({})
-            .then((breakfasts) =>
-                res.render('admin/trash-menu', {
-                    breakfasts: mutipleMongooseToObject(breakfasts),
-                }),
-            )
-            .catch(next);
-    }
-
-    storedlunch(req, res, next) {
-        Lunch.find({})
-            .then(lunchs => res.render('admin/stored-menu', {
-                lunchs: mutipleMongooseToObject(lunchs)
-            }))
-            .catch(next);
-    }
-
-    trashlunch(req, res, next) {
-        Lunch.findDeleted({})
-            .then((lunchs) =>
-                res.render('admin/trash-menu', {
-                    lunchs: mutipleMongooseToObject(lunchs),
-                }),
-            )
-            .catch(next);
-    }
-
-    storeddrink(req, res, next) {
-        Drink.find({})
-            .then(drinks => res.render('admin/stored-menu', {
-                drinks: mutipleMongooseToObject(drinks)
-            }))
-            .catch(next);
-    }
-
-    trashdrink(req, res, next) {
-        Drink.findDeleted({})
-            .then((drinks) =>
-                res.render('admin/trash-menu', {
-                    drinks: mutipleMongooseToObject(drinks),
-                }),
-            )
-            .catch(next);
-    }
-
-    storedwinecard(req, res, next) {
-        Winecard.find({})
-            .then(winecards => res.render('admin/stored-menu', {
-                winecards: mutipleMongooseToObject(winecards)
-            }))
-            .catch(next);
-    }
-
-    trashwinecard(req, res, next) {
-        Winecard.findDeleted({})
-            .then((winecards) =>
-                res.render('admin/trash-menu', {
-                    winecards: mutipleMongooseToObject(winecards),
-                }),
-            )
-            .catch(next);
-    }
-
-    storeddinner(req, res, next) {
-        Dinner.find({})
-            .then(dinners => res.render('admin/stored-menu', {
-                dinners: mutipleMongooseToObject(dinners)
-            }))
-            .catch(next);
-    }
-
-    trashdinner(req, res, next) {
-        Dinner.findDeleted({})
-            .then((dinners) =>
-                res.render('admin/trash-menu', {
-                    dinners: mutipleMongooseToObject(dinners),
-                }),
-            )
-            .catch(next);
-    }
-
-    storeddessert(req, res, next) {
-        Dessert.find({})
-            .then(desserts => res.render('admin/stored-menu', {
-                desserts: mutipleMongooseToObject(desserts)
-            }))
-            .catch(next);
-    }
-
-    trashdessert(req, res, next) {
-        Dessert.findDeleted({})
-            .then((desserts) =>
-                res.render('admin/trash-menu', {
-                    desserts: mutipleMongooseToObject(desserts),
-                }),
-            )
-            .catch(next);
-    }
-
 }
 
 module.exports = new AdminController;
