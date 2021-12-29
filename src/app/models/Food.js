@@ -2,9 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
  const Food = new Schema({
-    name: {
-        type: String,
-      },
       avatar: {
         type: String,
       },

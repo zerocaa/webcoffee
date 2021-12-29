@@ -9,6 +9,12 @@ class MenuController {
             .then(foods => res.render('menu', { foods }))
             .catch(next);
     }
+
+    test(req, res, next) {
+        Food.find({}).lean()
+            .then(foods => res.render('test', { foods }))
+            .catch(next);
+    }
     
 
 }

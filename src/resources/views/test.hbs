@@ -1,0 +1,244 @@
+<section class="hero-wrap hero-wrap-2" style="background-image: url('/src/public/images/bg_4.jpg');"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <h1 class="mb-2 bread">Make Reservation</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="/home">Home <i
+                                class="ion-ios-arrow-forward"></i></a></span> <span>Reservation <i
+                            class="ion-ios-arrow-forward"></i></span></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <span class="subheading">Specialties</span>
+                <h2 class="mb-4">Our Menu</h2>
+            </div>
+        </div>
+        <div class="listmenu row">
+
+            <div class="col-md-6 col-lg-4 menu-wrap" style="  width: 1px;
+              background-color: white;
+              height: 100%;
+              float: left;
+              border: 2px ridge white ;
+              border-radius: 70px;">
+                <div class="heading-menu text-center ftco-animate" style="margin-top: 14px;margin-bottom: -10px;">
+                    <h3>Breakfast</h3>
+                </div>
+
+                {{#each foods}}
+                <a href="/listdishes/{{this.breakfast.slug}}">
+                    <div class="menus d-flex ftco-animate" style="text-decoration: solid 1px black;
+                        border-bottom: 1px dashed black;
+                        border-radius: 25px;
+                        border: 2px solid #73AD21;
+                        padding: 12px;
+                        width: 100%;
+                        height: 110px;">
+
+                        <div class="menu-img img" style="background-image: url({{this.breakfast.image}});"></div>
+
+                        <div class="text">
+                            <div class="d-flex">
+                                <div class="one-half">
+                                    <h3>{{this.breakfast.name}}</h3>
+                                </div>
+                                <div class="one-forth">
+                                    <span class="price">{{this.breakfast.price}}</span>
+                                </div>
+                            </div>
+                            <p><span>{{this.breakfast.description}}</span></p>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-wrap" style="  width: 1px;
+      background-color: white;
+      height: 100%;
+      float: left;
+      border: 2px ridge white ;
+      border-radius: 70px;">
+                <div class="heading-menu text-center ftco-animate" style="margin-top: 14px;margin-bottom: -11px;">
+                    <h3>Lunch</h3>
+                </div>
+                {{#each foods}}
+                <a href="/listdishes/{{this.lunch.slug}}">
+                    <div class="menus d-flex ftco-animate" style="text-decoration: solid 1px black;
+    border-bottom: 1px dashed black;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 12px;
+    width: 100%;
+    height: 110px;">
+
+                        <div class="menu-img img" style="background-image: url({{this.lunch.image}});"></div>
+
+                        <div class="text">
+                            <div class="d-flex">
+                                <div class="one-half">
+                                    <h3>{{this.lunch.name}}</h3>
+                                </div>
+                                <div class="one-forth">
+                                    <span class="price">{{this.lunch.price}}</span>
+                                </div>
+                            </div>
+                            <p><span>{{this.lunch.description}}</span></p>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-wrap" style="  width: 1px;
+      background-color: white;
+      height: 100%;
+      float: left;
+      border: 2px ridge white ;
+      border-radius: 70px;">
+                <div class="heading-menu text-center ftco-animate" style="margin-top: 14px;margin-bottom: -10px;">
+                    <h3>Dinner</h3>
+                </div>
+                {{#each foods}}
+                <a href="/listdishes/{{this.dinner.slug}}">
+                    <div class="menus d-flex ftco-animate" style="text-decoration: solid 1px black;
+    border-bottom: 1px dashed black;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 12px;
+    width: 100%;
+    height: 110px;">
+                        <div class="menu-img img" style="background-image: url({{this.dinner.image}});"></div>
+                        <div class="text">
+                            <div class="d-flex">
+                                <div class="one-half">
+                                    <h3>{{this.dinner.name}}</h3>
+                                </div>
+                                <div class="one-forth">
+                                    <span class="price">{{this.dinner.price}}</span>
+                                </div>
+                            </div>
+                            <p><span>{{this.dinner.description}}</span></p>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+
+            <!--  -->
+            <div class="col-md-6 col-lg-4 menu-wrap" style="  width: 1px;
+      background-color: white;
+      height: 100%;
+      float: left;
+      border: 2px ridge white ;
+      border-radius: 70px;">
+                <div class="heading-menu text-center ftco-animate" style="margin-top: 14px;margin-bottom: 30px;">
+                    <h3>Desserts</h3>
+                </div>
+                {{#each foods}}
+                <a href="/listdishes/{{this.dinner.slug}}">
+                    <div class="menus d-flex ftco-animate" style="text-decoration: solid 1px black;
+    border-bottom: 1px dashed black;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 12px;
+    width: 100%;
+    height: 110px;">
+                        <div class="menu-img img" style="background-image: url({{this.desserts.image}});"></div>
+                        <div class="text">
+                            <div class="d-flex">
+                                <div class="one-half">
+                                    <h3>{{this.desserts.name}}</h3>
+                                </div>
+                                <div class="one-forth">
+                                    <span class="price">{{this.desserts.price}}</span>
+                                </div>
+                            </div>
+                            <p><span>{{this.desserts.description}}</span></p>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-wrap" style="  width: 1px;
+      background-color: white;
+      height: 100%;
+      float: left;
+      border: 2px ridge white ;
+      border-radius: 70px;">
+                <div class="heading-menu text-center ftco-animate" style="margin-top: 14px;margin-bottom: 30px;">
+                    <h3>Wine Card</h3>
+                </div>
+                {{#each foods}}
+                <a href="/listdishes/{{this.winecard.slug}}">
+                    <div class="menus d-flex ftco-animate" style="text-decoration: solid 1px black;
+    border-bottom: 1px dashed black;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 12px;
+    width: 100%;
+    height: 110px;">
+                        <div class="menu-img img" style="background-image: url({{this.winecard.image}});"></div>
+                        <div class="text">
+                            <div class="d-flex">
+                                <div class="one-half">
+                                    <h3>{{this.winecard.name}}</h3>
+                                </div>
+                                <div class="one-forth">
+                                    <span class="price">{{this.winecard.price}}</span>
+                                </div>
+                            </div>
+                            <p><span>{{this.winecard.description}}</span></p>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-wrap" style="  width: 1px;
+      background-color: white;
+      height: 100%;
+      float: left;
+      border: 2px ridge white ;
+      border-radius: 70px;">
+                <div class="heading-menu text-center ftco-animate" style="margin-top: 14px;margin-bottom: 30px;">
+                    <h3>Drinks</h3>
+                </div>
+                {{#each foods}}
+                <a href="/listdishes/{{this.drinks.slug}}">
+                    <div class="menus d-flex ftco-animate" style="text-decoration: solid 1px black;
+    border-bottom: 1px dashed black;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 12px;
+    width: 100%;
+    height: 110px;">
+                        <div class="menu-img img" style="background-image: url({{this.drinks.image}});"></div>
+                        <div class="text">
+                            <div class="d-flex">
+                                <div class="one-half">
+                                    <h3>{{this.drinks.name}}</h3>
+                                </div>
+                                <div class="one-forth">
+                                    <span class="price">{{this.drinks.price}}</span>
+                                </div>
+                            </div>
+                            <p><span>{{this.drinks.description}}</span></p>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+
+        </div>
+    </div>
+
+</section>

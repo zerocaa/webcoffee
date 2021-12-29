@@ -148,30 +148,32 @@
                     <h3>Breakfast</h3>
                 </div>
 
-                {{#each foods}}
-                <a href="/listdishes/{{this.breakfast.slug}}">
-                    <div class="menus d-flex ftco-animate" style="text-decoration: solid 1px black;
-    border-bottom: 1px dashed black;
-    border-radius: 25px;
-    border: 2px solid #73AD21;
-    padding: 12px;
-    width: 100%;
-    height: 110px;">
-                        <div class="menu-img img" style="background-image: url({{this.breakfast.image}});"></div>
-                        <div class="text">
-                            <div class="d-flex">
-                                <div class="one-half">
-                                    <h3>{{this.breakfast.name}}</h3>
-                                </div>
-                                <div class="one-forth">
-                                    <span class="price">{{this.breakfast.price}}</span>
-                                </div>
+            {{#each foods}}
+            <a href="/listdishes/{{this.breakfast.slug}}">
+                <div class="menus d-flex ftco-animate" style="text-decoration: solid 1px black;
+                border-bottom: 1px dashed black;
+                border-radius: 25px;
+                border: 2px solid #73AD21;
+                padding: 12px;
+                width: 100%;
+                height: 110px;">
+            
+                    <div class="menu-img img" style="background-image: url({{this.breakfast.image}});"></div>
+            
+                    <div class="text">
+                        <div class="d-flex">
+                            <div class="one-half">
+                                <h3>{{this.breakfast.name}}</h3>
                             </div>
-                            <p><span>{{this.breakfast.description}}</span></p>
+                            <div class="one-forth">
+                                <span class="price">{{this.breakfast.price}}</span>
+                            </div>
                         </div>
+                        <p><span>{{this.breakfast.description}}</span></p>
                     </div>
-                </a>
-                {{/each}}
+                </div>
+            </a>
+            {{/each}}
             </div>
 
             <div class="col-md-6 col-lg-4 menu-wrap" style="  width: 1px;

@@ -60,7 +60,7 @@ router.put("/:id", upload.single("image"), async (req, res) => {
     foods = await Food.findByIdAndUpdate(req.params.id, data, { new: true });
     res.json(foods);
   } catch (err) {
-    console.log(err);
+    console.log(err); 
   }
 });
 
