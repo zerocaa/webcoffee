@@ -4,7 +4,7 @@ const handlebars = require("express-handlebars");
 const methodOverride = require('method-override');
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-
+var bodyParser = require('body-parser');
 const app = express();
 const db = require("./config/db");
 //connect db
@@ -16,8 +16,8 @@ const route = require("./routes");
 route(app);
 
 // import bodyParser from "body-parser";//for typscript code only, use require for js
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 //http logger
 app.use(express.static(path.join(__dirname, '/public')));
 // app.use(morgan("combined"));

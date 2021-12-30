@@ -23,4 +23,4 @@ Lunch.plugin(mongooseDelete, {
         deletedAt: true,
         overrideMethods: 'all',
 });
-module.exports = mongoose.model('Lunch', Lunch);
+module.exports = mongoose.model('Lunchs', Lunch);

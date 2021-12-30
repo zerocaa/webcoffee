@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-
+var bodyParser = require('body-parser');
 const searchController = require('../app/controllers/SearchController')
 const app = express();
 
-router.use(express.urlencoded());
-router.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 router.post('/', (req, res) => {
     const data = req.body;
